@@ -1,8 +1,7 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap'); */
-/* font-family: 'Raleway', sans-serif; */
 body{
-    /* background: red; */
+    -webkit-font-smoothing:antialiased ;
 }
+/* fonts */
 @font-face {
     font-family: "Raleway-regular";
     src: url(../fonts/Raleway-Regular.ttf);
@@ -42,9 +41,7 @@ body{
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    -webkit-font-smoothing:antialiased ;
-}
+
 .container{
     width:100%;
     padding: 0 15px;
@@ -82,6 +79,80 @@ header.topbar .auth > div a{
 header.topbar .auth > div img{
     margin-right: 0.35rem;
 }
+nav .top{
+    padding: 1.5rem 0;
+}
+nav .top .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .top .contact{
+    display: flex;
+    /* justify-content: space-between; */
+}
+nav .top .contact h5,nav .top .time h5{
+   font-family: "Raleway-black";
+   margin-bottom: 0.25rem;
+}
+nav .top .contact h6,nav .top .time h6{
+    font-family: "Raleway-medium";
+    letter-spacing: 0.055rem;
+    font-size: 0.75rem;
+    color: var(--ternary);
+    
+ }
+nav .top .time{
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+nav .navbar .container{
+    display: flex;
+    justify-content: center;
+}
+nav .navbar a{
+    text-decoration: none;
+    color: var(--secondary);
+    font-family: "Raleway-semiBold";
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+}
+nav .navbar a.active{
+    background: var(--primary);
+    color: var(--pure);
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease ;
+    -moz-transition: all .3s ease ;
+    -ms-transition: all .3s ease ;
+    -o-transition: all .3s ease ;
+}
+nav .navbar a:hover{
+    background: var(--primary);
+    color: var(--pure);
+}
+
+nav .top .contact img,nav .top .time img{
+    margin-right: 1rem;
+}
+/* Utility Class */
+.magic-shadow{
+    position: relative;
+    background: var(--heaven);
+}
+.magic-shadow::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 69px;
+    background-image: url(../icons/shadow.svg);
+    position: absolute;
+    bottom: -22px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
 /* Responsive */
 @media(min-width:576px){
     .container{
